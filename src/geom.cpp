@@ -2,36 +2,86 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+const float pi=3,14;
+int n;
+
 int main()
 {
-    struct cir {
-        char a[100];
-        int n;
-        int k;
-    } circle[4];
-    emp[] = "\0";
-    int i, j = 0;
-    while (j < 4) {
-        scanf("%s %d %d", circle.a, circle.n, circle.k);
+    int i = 0, p = 0, k = 0, fg[2], fh[8];
+    double r;
+    char A[] = "circle(", B[] = "triangle(", s[80], s1[80] = {0}, emp[] = "\0",
+         exit[] = "exit";
 
-        if (strstr(circle.a, "exit"))
+    while (1) {
+        scanf("%s", s);
+        if (strcmp(exit, s) == 0)
             break;
-        if (strstr(circle.a, "circle")) {
-            printf("%s\n", a);
+        if (strncmp(A, s, 7) == 0) {
+            i = 7;
+            p = 0;
+            k = 7;
+            while (p < 2) {
+                if (s[i] == ',') {
+                    fg[p] = atoi(s1);
+                    strcpy(s1, emp);
 
-        } else
-            printf("unknown shape %s \n", a);
-
-        for (i = 0; i < 100; i++) {
-            if (a[i] == '(') {
-                strncat(b, emp, 2);
-
-                break;
+                    p++;
+                    k++;
+                } else {
+                    strncat(s1, s + k, 1);
+                    k++;
+                }
+                i++;
             }
-            b[i] = a[i];
+            while (p != 0) {
+                if (s[i] == ')') {
+                    r = atof(s1);
+                    strcpy(s1, emp);
+                    k = 7;
+                    p = 0;
+                    i = 6;
+                } else {
+                    strncat(s1, s + k, 1);
+                    k++;
+                }
+                i++;
+            }
+            pip(r);
         }
 
-        j++;
+        if (strncmp(B, s, 9) == 0) {
+            i = 9;
+            p = 0;
+            k = 9;
+            while (p < 7) {
+                if (s[i] == ',') {
+                   fh[p] = atoi(s1);
+                    strcpy(s1, emp);
+                    p++;
+                    k++;
+                } else {
+                    strncat(s1, s + k, 1);
+                    k++;
+                }
+                i++;
+            }
+            while (p != 0) {
+                if (s[i] == ')') {
+                    fh[p] = atoi(s1);
+                    strcpy(s1, emp);
+                    k = 7;
+                    p = 0;
+                    i = 6;
+                } else {
+                    strncat(s1, s + k, 1);
+                    k++;
+                }
+                i++;
+            }
+            pip(fh);
+        }
     }
+    printf(" %d", fg[0]);
+
     return 0;
 }
