@@ -1,8 +1,8 @@
 #ifndef PERPL_H
 #define PERPL_H
 
-int perimetr(int f);
-
-int ploshad(int f);
+void per(int x[3][9]);
+void perpl(int r);
+void perpl(int* x);
 
 #endif
