@@ -1,9 +1,9 @@
 .PHONY:all clean
 CC=gcc
 FLAGS=-Wall -Werror
-SD=~/geometry/src/
-OD=~/geometry/build/
-EXECUTABLE=~/geometry/bin/geom.exe
+SD=src/
+OD=build/
+EXECUTABLE=bin/geom.exe
 all: $(EXECUTABLE)
 
 
