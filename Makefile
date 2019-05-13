@@ -3,8 +3,8 @@ CC=gcc
 FLAGS=-Wall -Werror
 TESTFLAGS=-I thirdparty src
 SD=src/
-OD=build/src
-ODT=build/test
+OD=build/src/
+ODT=build/test/
 EXECUTABLE=bin/geom.exe
 EXE=bin/test.exe
 all: build/src $(EXECUTABLE)
