@@ -1,8 +1,8 @@
-#ifndef PERPL_H
-#define PERPL_H
+#ifndef MYPROJECT_FOO_H
+#define MYPROJECT_FOO_H
 
-void per(int x[3][9]);
-void perpl(int r);
-void perpl(int* x);
+int per(int* x);
+int plo(int* x);
+void perpl(int x[3][9]);
 
 #endif
