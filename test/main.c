@@ -56,7 +56,7 @@ int plo(int* x) {
 	return pl;
 }
 
-CTEST(area_test, result_test_circle) {
+CTEST(area_test1, result_test_circle1) {
 	// Given
 	int x[1][9] = {{1, 1, 2, 1, 1, 1, 1, 1, 1}};
 
@@ -67,7 +67,7 @@ CTEST(area_test, result_test_circle) {
 	const int expected = 12;
 	ASSERT_EQUAL(expected, result);
 }
-CTEST(area_testt, resultt_test_triangle) {
+CTEST(area_test2, result_test_triangle1) {
 	// Given
 	int x[1][9] = {{1, 1, 2, 2, 3, 1, 1, 1, 2}};
 
@@ -78,7 +78,7 @@ CTEST(area_testt, resultt_test_triangle) {
 	const int expected = 1;
 	ASSERT_EQUAL(expected, result);
 }
-CTEST(perimetr_test, result_test_circle) {
+CTEST(perimetr_test1, result_test_circle2) {
 	// Given
 	int x[1][9] = {{1, 1, 2, 1, 1, 1, 1, 1, 1}};
 
@@ -89,7 +89,7 @@ CTEST(perimetr_test, result_test_circle) {
 	const int expected = 12;
 	ASSERT_EQUAL(expected, result);
 }
-CTEST(perimetr_testt, resultt_test_triangle) {
+CTEST(perimetr_test2, result_test_triangle2) {
 	// Given
 	int x[1][9] = {{1, 1, 1, 4, 5, 1, 1, 1, 2}};
 
